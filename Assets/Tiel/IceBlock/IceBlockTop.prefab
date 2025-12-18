@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 830049907064279836}
   - component: {fileID: 4320946402370699654}
   - component: {fileID: 2452551654480064658}
-  - component: {fileID: 5570413332872314807}
+  - component: {fileID: -6135801751532984353}
   m_Layer: 6
   m_Name: IceBlockTop
   m_TagString: Untagged
@@ -107,7 +107,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!212 &5570413332872314807
+--- !u!212 &-6135801751532984353
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -130,7 +130,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

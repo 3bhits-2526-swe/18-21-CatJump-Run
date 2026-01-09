@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Ground
   - Tree
+  - TreeLocked
+  - TreeUnlocked
   layers:
   - Default
   - TransparentFX

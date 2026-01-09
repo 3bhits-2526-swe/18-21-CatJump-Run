@@ -6,9 +6,10 @@ public class CollectibleManager : MonoBehaviour
     [Header("General")]
     [SerializeField] private TextMeshProUGUI collectibleCountText;
     [SerializeField] private int pickedUpCollectibles;
-    [SerializeField] private int maxCollectibles = 12;
     [SerializeField] private string collectibleName = "Collectibles";
-    public static CollectibleManager collectibleManager {get; private set;}
+    public int maxCollectibles = 12;
+    public bool GotEverything;
+    public static CollectibleManager collectibleManager { get; private set; }
 
     void Awake()
     {
@@ -22,16 +23,15 @@ public class CollectibleManager : MonoBehaviour
 
     void Update()
     {
-        
+
     }
     public void IncreaseCount()
     {
-        pickedUpCollectibles ++;
+        pickedUpCollectibles++;
         collectibleCountText.text = $"{pickedUpCollectibles}/{maxCollectibles} {collectibleName}";
-        if(pickedUpCollectibles >= maxCollectibles)
+        if (pickedUpCollectibles >= maxCollectibles)
         {
-            InitiateWin();
+            GotEverything = true;
         }
     }
-    private void InitiateWin(){Debug.Log("WIN");}
 }

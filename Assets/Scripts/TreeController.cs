@@ -2,15 +2,19 @@ using UnityEngine;
 
 public class TreeController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private GameObject treeLocked;
+    [SerializeField] private GameObject treeUnlocked;
+    void Awake()
     {
-        
+        treeLocked = GameObject.FindWithTag("TreeLocked");
+        treeUnlocked = GameObject.FindWithTag("TreeUnlocked");
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if (collision.gameObject == GameObject.FindWithTag("Player") && CollectibleManager.collectibleManager.GotEverything)
+        {
+            treeLocked.SetActive(false);
+            treeUnlocked.GetComponent<SpriteRenderer>().enabled = true;
+        }
     }
 }
